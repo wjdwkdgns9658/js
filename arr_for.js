@@ -42,13 +42,13 @@ console.log("난 다섯번 실행");
 //     ++count;  //112
 //     count++;
 
-let multy = 10;
-    multy = multy * 3; // multy *= 3; 곱하기(*)
-    multy = multy / 3; // multy /= 3; 나누기(/)
+// let multy = 10;
+//     multy = multy * 3; // multy *= 3; 곱하기(*)
+//     multy = multy / 3; // multy /= 3; 나누기(/)
 
-//문자연산식
-let mystudy = "리액트"
-    mystudy = "리액트" + "뷰" ; //mystudy += "뷰" ;
+// //문자연산식
+// let mystudy = "리액트"
+//     mystudy = "리액트" + "뷰" ; //mystudy += "뷰" ;
 
 let startjs = 10; 
     startjs += 10;   //20

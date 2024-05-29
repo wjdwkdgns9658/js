@@ -29,20 +29,26 @@
                                 gnb_li_href : "./board.html"
                             }
                         ]
-                        // document.querySelector("#gnb").innerHTML = nav_data[0].gnb_li_a;
-                        // document.querySelector("#gnb").innerHTML = `
-                        //                                     <li>${nav_data[0].gnb_li_a}</li>
-                        //                                     <li>${nav_data[1].gnb_li_a}</li>
-                        //                                     <li>${nav_data[2].gnb_li_a}</li>
-                        //                                     `;
+                        document.querySelector("#gnb").innerHTML = nav_data[0].gnb_li_a;
+                        document.querySelector("#gnb").innerHTML = `
+                                                            <li>${nav_data[0].gnb_li_a}</li>
+                                                            <li>${nav_data[1].gnb_li_a}</li>
+                                                            <li>${nav_data[2].gnb_li_a}</li>
+                                                            `;
 
                         document.querySelector("#gnb").innerHTML = `
                                                             <li>
                                                                 <a href ="${nav_data[0].gnb_li_href}">
                                                                 ${nav_data[0].gnb_li_a}</a>
                                                                 </li>
-                                                            <li>${nav_data[1].gnb_li_a}</li>
-                                                            <li>${nav_data[2].gnb_li_a}</li>
+                                                                <li>
+                                                                <a href ="${nav_data[1].gnb_li_href}">
+                                                                ${nav_data[1].gnb_li_a}</a>
+                                                                </li>
+                                                                <li>
+                                                                <a href ="${nav_data[2].gnb_li_href}">
+                                                                ${nav_data[2].gnb_li_a}</a>
+                                                                </li>
                                                             `;
                         
     </script>
