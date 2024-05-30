@@ -27,8 +27,15 @@
                             {
                                 gnb_li_a : "커뮤니티",
                                 gnb_li_href : "./board.html"
+                            },
+                            {
+                                gnb_li_a : "인트라넷",
+                                gnb_li_href : "./intro.html"
                             }
                         ]
+                            
+
+
                         document.querySelector("#gnb").innerHTML = nav_data[0].gnb_li_a;
                         document.querySelector("#gnb").innerHTML = `
                                                             <li>${nav_data[0].gnb_li_a}</li>
