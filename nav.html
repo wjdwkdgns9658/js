@@ -10,10 +10,6 @@
     
         <ul id="gnb"></ul>
 
-
-
-
-
     <script>
         const nav_data = [
                             {
@@ -33,30 +29,47 @@
                                 gnb_li_href : "./intro.html"
                             }
                         ]
-                            
 
 
-                        document.querySelector("#gnb").innerHTML = nav_data[0].gnb_li_a;
-                        document.querySelector("#gnb").innerHTML = `
-                                                            <li>${nav_data[0].gnb_li_a}</li>
-                                                            <li>${nav_data[1].gnb_li_a}</li>
-                                                            <li>${nav_data[2].gnb_li_a}</li>
-                                                            `;
+                    const targetul = document.getElementById("gnb");
+                    let gnblis = "";
 
-                        document.querySelector("#gnb").innerHTML = `
-                                                            <li>
-                                                                <a href ="${nav_data[0].gnb_li_href}">
-                                                                ${nav_data[0].gnb_li_a}</a>
-                                                                </li>
-                                                                <li>
-                                                                <a href ="${nav_data[1].gnb_li_href}">
-                                                                ${nav_data[1].gnb_li_a}</a>
-                                                                </li>
-                                                                <li>
-                                                                <a href ="${nav_data[2].gnb_li_href}">
-                                                                ${nav_data[2].gnb_li_a}</a>
-                                                                </li>
-                                                            `;
+                    for(i in nav_data){
+                        gnblis += `<li>
+                            <a href="${nav_data[i]["gnb_li_href"]}">
+                                ${nav_data[i].gnb_li_a}
+                            </a>
+                        </li>`; 
+                    }
+
+
+
+                    targetul.innerHTML = gnblis;
+
+
+
+
+                        // document.querySelector("#gnb").innerHTML = nav_data[0].gnb_li_a;
+                        // document.querySelector("#gnb").innerHTML = `
+                        //                                     <li>${nav_data[0].gnb_li_a}</li>
+                        //                                     <li>${nav_data[1].gnb_li_a}</li>
+                        //                                     <li>${nav_data[2].gnb_li_a}</li>
+                        //                                     `;
+
+                        // document.querySelector("#gnb").innerHTML = `
+                        //                                     <li>
+                        //                                         <a href ="${nav_data[0].gnb_li_href}">
+                        //                                         ${nav_data[0].gnb_li_a}</a>
+                        //                                         </li>
+                        //                                         <li>
+                        //                                         <a href ="${nav_data[1].gnb_li_href}">
+                        //                                         ${nav_data[1].gnb_li_a}</a>
+                        //                                         </li>
+                        //                                         <li>
+                        //                                         <a href ="${nav_data[2].gnb_li_href}">
+                        //                                         ${nav_data[2].gnb_li_a}</a>
+                        //                                         </li>
+                        //                                     `;
                         
     </script>
     
