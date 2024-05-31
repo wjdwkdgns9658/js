@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html에 태그에 데이터저장</title>
+</head>
+<body>
+    <!-- <p data-content="html 태그에 데이터를 저장한 것임"
+        data-cls = "text-dark bg-white border">여기 글자 수정해줘</p>
+    
+    <script>
+        const ptag = document.querySelector("p");
+        ptag.innerHTML = ptag.dataset.content;
+        ptag.classList = ptag.dataset.cls;
+    </script> -->
+
+<div id="box" style="display:inline-block">
+    버튼을 클릭해보세요.
+</div>
+<div class="btns">
+  <button data-bg="red" data-text="빨강색">1</button>
+  <button data-bg="yellow" data-text="노랑색">2</button>
+  <button data-bg="blue" data-text="파랑색">3</button>
+  <button data-bg="orange" data-text="주황색">4</button>
+  <button data-bg="green" data-text="초록색">5</button>
+</div>
+
+<script>
+  const targetbox = document.getElementById("box"); //메서드를 바로 받을 수 있음
+  const btns = document.querySelectorAll(".btns button");   //집합 forEach
+
+  const colors = ['magenta', 'brown', 'pink', 'purple', 'black', 'Olive', 'lime'];
+  let colorIndex = 0; 
+
+
+  btns.forEach(function(ele,idx){
+    //console.log("태그가",ele,"순차",idx)
+    ele.addEventListener('click', function(){
+        console.log(this);
+        targetbox.innerHTML = this.dataset.text;
+        targetbox.style.backgroundColor = this.dataset.bg;
+        targetbox.style.color = 'white'; 
+        targetbox.style.fontSize = '36px'; 
+
+        targetbox.style.color = colors[colorIndex];
+      colorIndex = (colorIndex + 1) % colors.length;
+    })
+  })
+
+
+
+</script>
+</body>
+</html>
