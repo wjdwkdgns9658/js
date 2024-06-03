@@ -30,8 +30,8 @@
   const targetbox = document.getElementById("box"); //메서드를 바로 받을 수 있음
   const btns = document.querySelectorAll(".btns button");   //집합 forEach
 
-  const colors = ['magenta', 'brown', 'pink', 'purple', 'black', 'Olive', 'lime'];
-  let colorIndex = 0; 
+  // const colors = ['magenta', 'brown', 'pink', 'purple', 'black', 'Olive', 'lime'];
+  // let colorIndex = 0; 
 
 
   btns.forEach(function(ele,idx){
@@ -40,11 +40,11 @@
         console.log(this);
         targetbox.innerHTML = this.dataset.text;
         targetbox.style.backgroundColor = this.dataset.bg;
-        targetbox.style.color = 'white'; 
-        targetbox.style.fontSize = '36px'; 
+        // targetbox.style.color = 'white'; 
+        // targetbox.style.fontSize = '36px'; 
 
-        targetbox.style.color = colors[colorIndex];
-      colorIndex = (colorIndex + 1) % colors.length;
+      //   targetbox.style.color = colors[colorIndex];
+      // colorIndex = (colorIndex + 1) % colors.length;
     })
   })
 
