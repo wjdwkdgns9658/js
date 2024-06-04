@@ -90,6 +90,9 @@ const hd_yys ={
     ]
 }
 
+import hd_yys from "./navi.json";
+
+
 
 //onload 페이지마다 한번씩 사용 가능
 // window.onload = function(){
@@ -103,7 +106,7 @@ for(x in hd_yys.gnb){
         <a href ='${hd_yys.gnb[x].href}' class='${hd_yys.gnb[x].cls[1]}'>
         ${hd_yys.gnb[x].Text}
         </a>`;
-    navitag += `<ul>`;
+    if(hd_yys.gnb[x].gnb_ul_li.length > 0) navitag += `<ul>`;
     for(j in hd_yys.gnb[x].gnb_ul_li){
         navitag += `<li>
         <a href ='${hd_yys.gnb[x].gnb_ul_li[j].href}'>
@@ -111,7 +114,7 @@ for(x in hd_yys.gnb){
         </a>
         </li>`
     }
-    navitag += `</ul>`;
+    if(hd_yys.gnb[x].gnb_ul_li.length > 0) navitag += `</ul>`;
     navitag += `</li>`;     
 }
 
