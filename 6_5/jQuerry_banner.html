@@ -10,9 +10,12 @@
             const aniWidth = $(".banner").width();
             $(".banner-slide").width(aniWidth);
             // $(".banner-wrapper").css("marginLeft", -aniWidth);
-            aetInterval(function(){
-                $(".banner-wrapper").animate({"marginLeft" :"-="+aniWidth }, 400)
-            }, 3000);
+            setInterval(function(){
+                $(".banner-wrapper").animate({"marginLeft" :"-="+aniWidth }, 400, function(){
+                    $(".banner-slide").eq(0).appendTo($(".banner-wrapper"));
+                    $(".banner-wrapper").css({"marginLeft" : 0})
+                })
+            }, 50);
 
             
         })
