@@ -8,10 +8,15 @@
     <script>
         //  $(document).ready() 축약
         $(function(){
-            const bglist = ["pink", "green", "magenta", "yellow"];
-            let count = 100% bglist.length; //0,1,2,3
+            const bglist = ["pink", "orange", "magenta", "yellow"];
+            let count = 0; //0,1,2,3
             //bglist.length는 숫자 4를 의미, 4로 나누었을때 나머지를 구하는 연사자 %
-            $("body").css("background",bglist[count]);
+            setInterval(function(){
+                count++;
+                count = count % bglist.length;
+                $("body").css("background",bglist[count]);
+            },10000); //3초뒤부터 3초 실행한다
+            $("body").css("background",bglist[count]); //화면이 열리자마자 1회 실행
         })
     </script>
 </head>
