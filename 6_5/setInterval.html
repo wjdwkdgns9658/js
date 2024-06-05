@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주기적으로 실행 setInterval</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script>
+        //  $(document).ready() 축약
+        $(function(){
+            const bglist = ["pink", "green", "magenta", "yellow"];
+            let count = 100% bglist.length; //0,1,2,3
+            //bglist.length는 숫자 4를 의미, 4로 나누었을때 나머지를 구하는 연사자 %
+            $("body").css("background",bglist[count]);
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
